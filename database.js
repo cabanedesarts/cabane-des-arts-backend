@@ -48,7 +48,16 @@ db.exec(`
     lu BOOLEAN DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
-
+CREATE TABLE IF NOT EXISTS avis (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom TEXT NOT NULL,
+    email TEXT NOT NULL,
+    produit TEXT,
+    note INTEGER NOT NULL CHECK(note >= 1 AND note <= 5),
+    commentaire TEXT NOT NULL,
+    statut TEXT DEFAULT 'en_attente',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
   CREATE TABLE IF NOT EXISTS newsletter (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT UNIQUE NOT NULL,

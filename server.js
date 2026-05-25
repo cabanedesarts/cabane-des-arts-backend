@@ -20,6 +20,7 @@ app.use('/api/reservations', require('./routes/reservations'));
 app.use('/api/contact', require('./routes/contact'));
 app.use('/api/newsletter', require('./routes/newsletter'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/avis', require('./routes/avis'));
 
 // ===== ROUTE DE TEST =====
 app.get('/', (req, res) => {

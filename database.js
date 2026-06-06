@@ -48,6 +48,19 @@ db.exec(`
     lu BOOLEAN DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
+  CREATE TABLE IF NOT EXISTS evenements (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titre TEXT NOT NULL,
+    description TEXT NOT NULL,
+    date_debut TEXT NOT NULL,
+    date_fin TEXT,
+    lieu TEXT,
+    type TEXT DEFAULT 'atelier',
+    prix INTEGER DEFAULT 0,
+    image_url TEXT,
+    statut TEXT DEFAULT 'publié',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
 CREATE TABLE IF NOT EXISTS avis (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom TEXT NOT NULL,

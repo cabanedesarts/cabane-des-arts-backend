@@ -21,6 +21,7 @@ app.use('/api/contact', require('./routes/contact'));
 app.use('/api/newsletter', require('./routes/newsletter'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/avis', require('./routes/avis'));
+app.use('/api/evenements', require('./routes/evenements'));
 
 // ===== ROUTE DE TEST =====
 app.get('/', (req, res) => {
